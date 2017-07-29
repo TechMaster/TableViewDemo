@@ -9,43 +9,43 @@
 		<array>
 			<dict>
 				<key>country</key>
-				<string>Tazania</string>
+				<string>Ai Cập</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Cairo</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>aicap.png</string>
 			</dict>
 			<dict>
 				<key>country</key>
-				<string>Sudan</string>
+				<string>Libya</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Tripoli</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>libya.png</string>
 			</dict>
 			<dict>
 				<key>country</key>
-				<string>Tazania</string>
+				<string>Tunisia</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Tunis</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>tunisia.png</string>
 			</dict>
 			<dict>
 				<key>country</key>
-				<string>Tazania</string>
+				<string>Algérie</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Algiers</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>algeria.png</string>
 			</dict>
 			<dict>
 				<key>country</key>
-				<string>Tazania</string>
+				<string>Maroc</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Rabat</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>morocco.png</string>
 			</dict>
 		</array>
 	</dict>
@@ -76,7 +76,7 @@
 				<key>capital</key>
 				<string>Phnom Penh</string>
 				<key>flag</key>
-				<string>Cambodia.png</string>
+				<string>Cambodian.png</string>
 			</dict>
 			<dict>
 				<key>country</key>

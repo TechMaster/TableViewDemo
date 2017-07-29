@@ -21,7 +21,8 @@ class ViewDetail: UIViewController {
     //MARK:: Methods - Override
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.gray
+        
         let capital = dictCountry.value(forKey: "capital") as! String?
         self.lblTĐ.text = capital
         
