@@ -7,7 +7,7 @@ Mục đích:
 
 ## Cấu trúc file .plist trong bài toán
 
-![](/assets/Screen Shot 2017-07-29 at 22.55.18.png)
+![](/assets/1.png)
 
 Yêu cầu ở View 1 lấy ra được các tên quốc gia\(country\) cùng thuộc 1 châu lục nằm trong 1 Section.Sau đó ở view 2 đưa ra thông tin chi tiết của quốc gia đó.
 
