@@ -8,14 +8,16 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController ,ExpandableHeaderViewDelegate{
     
     //MARK:: Parameters - User
     
     var continent_Array = [String]() // Mảng lưu tên các Châu lục -> tạo section cho TableView
+    var status : Bool = false
     
     var country_Dict = NSMutableDictionary() // Dictionary lưu key là Continent(Các châu lục) với value tương ứng là 1 mảng Object Coutry(tên nước,thủ đô,cờ)
     
+    var All_Array = [[String: Bool]]()
     //MARK:: Methods - Override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,12 @@ class TableViewController: UITableViewController {
             
             self.country_Dict.setValue(country_Obj, forKey: continent)
             
-            }
+            let dic = [continent: false]
+            
+            self.All_Array.append(dic)
+            
+        }
+        print(All_Array)
         
     }
     
@@ -57,13 +64,14 @@ class TableViewController: UITableViewController {
         let sectionObject = country_Dict.object(forKey: sectiontitle) as! NSArray
         return sectionObject.count
     }
+
     // Hiển thị dữ liệu cho từng Cell trong mỗi hàng(Row)
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "labelCell", for: indexPath)
         
         if(cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
+            cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "labelCell")
         }
         // Lấy ra châu lục mà tương ứng với section
         let sectionTitle = continent_Array[indexPath.section]
@@ -77,12 +85,40 @@ class TableViewController: UITableViewController {
         return cell
     }
     // Hiển thị tên mục Section
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return continent_Array[section]
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return continent_Array[section]
+//    }
+    func toggleSection(header: ExpandableHeaderView, section: Int) {
+//        print(All_Array[section])
+//        print()
+        All_Array[section][continent_Array[section]] = !All_Array[section][continent_Array[section]]!
+
+        tableView.beginUpdates()
+        let sectionTitle = continent_Array[section]
+        let sectionValueCountry = country_Dict[sectionTitle] as! NSArray
+        
+        for i in 0 ..< sectionValueCountry.count{
+            
+            tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
+        }
+        tableView.endUpdates()
+
+    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = ExpandableHeaderView()
+        header.customInit(title: continent_Array[section], section: section, delegate: self)
+        return header
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        if All_Array[indexPath.section][continent_Array[indexPath.section]] == true {
+            return 44
+        }else{
+            return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {

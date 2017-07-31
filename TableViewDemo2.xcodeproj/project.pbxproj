@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86F113901F2F30B800341EE0 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F1138F1F2F30B800341EE0 /* ExpandableHeaderView.swift */; };
 		86F408081F2B33B6009ADA6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F408071F2B33B6009ADA6D /* AppDelegate.swift */; };
 		86F4080A1F2B33B6009ADA6D /* ViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F408091F2B33B6009ADA6D /* ViewDetail.swift */; };
 		86F4080D1F2B33B6009ADA6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F4080B1F2B33B6009ADA6D /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86F1138F1F2F30B800341EE0 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		86F408041F2B33B6009ADA6D /* TableViewDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F408071F2B33B6009ADA6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86F408091F2B33B6009ADA6D /* ViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetail.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				86F408191F2B3408009ADA6D /* TableViewController.swift */,
 				86F4081D1F2B3461009ADA6D /* Country.swift */,
 				86F4080B1F2B33B6009ADA6D /* Main.storyboard */,
+				86F1138F1F2F30B800341EE0 /* ExpandableHeaderView.swift */,
 				86F4081B1F2B3420009ADA6D /* Data.plist */,
 				86F4080E1F2B33B6009ADA6D /* Assets.xcassets */,
 				86F408101F2B33B6009ADA6D /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			files = (
 				86F4081E1F2B3461009ADA6D /* Country.swift in Sources */,
 				86F4080A1F2B33B6009ADA6D /* ViewDetail.swift in Sources */,
+				86F113901F2F30B800341EE0 /* ExpandableHeaderView.swift in Sources */,
 				86F4081A1F2B3408009ADA6D /* TableViewController.swift in Sources */,
 				86F408081F2B33B6009ADA6D /* AppDelegate.swift in Sources */,
 			);

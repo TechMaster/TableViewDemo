@@ -29,6 +29,7 @@ class ViewDetail: UIViewController {
         self.lblQG.text = dictCountry.value(forKey: "country") as! String?
         
         let stringImage = dictCountry.value(forKey: "flag") as! String?
+        
         self.image.image = UIImage(named: stringImage!)
     }
 

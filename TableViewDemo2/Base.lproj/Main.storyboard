@@ -108,11 +108,19 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9yI-Go-cLe" id="cxI-4N-yDp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="labelCell" id="kcD-TE-iK1">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kcD-TE-iK1" id="Fa8-gh-xyx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="SkF-gU-Amg" kind="show" identifier="ShowDetail" id="Iqg-mQ-3c8"/>
+                                    <segue destination="SkF-gU-Amg" kind="show" identifier="ShowDetail" id="WnY-ZD-l7f"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -132,7 +140,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p5R-tD-6X4" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yxY-8L-mRd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yxY-8L-mRd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
