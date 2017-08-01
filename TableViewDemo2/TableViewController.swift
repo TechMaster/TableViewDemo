@@ -84,13 +84,9 @@ class TableViewController: UITableViewController ,ExpandableHeaderViewDelegate{
         
         return cell
     }
-    // Hiển thị tên mục Section
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return continent_Array[section]
-//    }
+
     func toggleSection(header: ExpandableHeaderView, section: Int) {
-//        print(All_Array[section])
-//        print()
+        
         All_Array[section][continent_Array[section]] = !All_Array[section][continent_Array[section]]!
 
         tableView.beginUpdates()
