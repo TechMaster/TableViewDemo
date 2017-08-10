@@ -12,7 +12,7 @@ protocol ExpandableHeaderViewDelegate {
     func toggleSection(header: ExpandableHeaderView, section: Int)
 }
 
-class ExpandableHeaderView: UITableViewHeaderFooterView {
+class ExpandableHeaderView: UITableViewHeaderFooterView{
     var delegate: ExpandableHeaderViewDelegate?
     var section: Int!
     
@@ -27,6 +27,7 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
     
     func selectHeaderAction(gestureRecognizer: UITapGestureRecognizer) {
         let cell = gestureRecognizer.view as! ExpandableHeaderView
+        
         delegate?.toggleSection(header: self, section: cell.section)
     }
     
@@ -44,3 +45,5 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
 
 
 }
+
+

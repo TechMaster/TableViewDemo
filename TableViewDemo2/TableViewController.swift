@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController ,ExpandableHeaderViewDelegate{
+class TableViewController: UITableViewController ,ExpandableHeaderViewDelegate {
     
     //MARK:: Parameters - User
     
@@ -18,6 +18,7 @@ class TableViewController: UITableViewController ,ExpandableHeaderViewDelegate{
     var country_Dict = NSMutableDictionary() // Dictionary lưu key là Continent(Các châu lục) với value tương ứng là 1 mảng Object Coutry(tên nước,thủ đô,cờ)
     
     var All_Array = [[String: Bool]]()
+    
     //MARK:: Methods - Override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,10 +69,10 @@ class TableViewController: UITableViewController ,ExpandableHeaderViewDelegate{
     // Hiển thị dữ liệu cho từng Cell trong mỗi hàng(Row)
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "labelCell", for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "labelCell", for: indexPath) as! CellCustom
         
         if(cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "labelCell")
+            cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "labelCell") as! CellCustom
         }
         // Lấy ra châu lục mà tương ứng với section
         let sectionTitle = continent_Array[indexPath.section]
@@ -80,7 +81,9 @@ class TableViewController: UITableViewController ,ExpandableHeaderViewDelegate{
         // Lấy ra 1 cái Obj_Country
         let countryObject = sectionValueCountry[indexPath.row] as! NSDictionary
         
-        cell.textLabel?.text = countryObject.value(forKey: "country") as! String?
+        let valueForCell = countryObject.value(forKey: "country") as! String?
+        
+        cell.configureCell(nameCountry: valueForCell!)
         
         return cell
     }
@@ -96,6 +99,7 @@ class TableViewController: UITableViewController ,ExpandableHeaderViewDelegate{
         for i in 0 ..< sectionValueCountry.count{
             
             tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
+            print("toggle")
         }
         tableView.endUpdates()
 

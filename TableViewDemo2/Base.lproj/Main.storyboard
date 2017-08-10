@@ -112,14 +112,29 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="labelCell" id="kcD-TE-iK1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="labelCell" id="kcD-TE-iK1" customClass="CellCustom" customModule="TableViewDemo2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kcD-TE-iK1" id="Fa8-gh-xyx">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKo-GW-kZB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="VKo-GW-kZB" secondAttribute="trailing" id="12v-gd-xbR"/>
+                                        <constraint firstItem="VKo-GW-kZB" firstAttribute="leading" secondItem="Fa8-gh-xyx" secondAttribute="leading" id="5ij-ot-9n3"/>
+                                        <constraint firstAttribute="bottom" secondItem="VKo-GW-kZB" secondAttribute="bottom" id="ZxS-ks-vBg"/>
+                                        <constraint firstItem="VKo-GW-kZB" firstAttribute="top" secondItem="Fa8-gh-xyx" secondAttribute="top" id="lIZ-UJ-76h"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="textLabelCustom" destination="VKo-GW-kZB" id="LYj-89-ACp"/>
                                     <segue destination="SkF-gU-Amg" kind="show" identifier="ShowDetail" id="WnY-ZD-l7f"/>
                                 </connections>
                             </tableViewCell>
